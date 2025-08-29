@@ -13,7 +13,7 @@ echo_main_zig() {
 	echo -e "const std = @import(\"std\");$text_allocator_1
 
 pub fn main() void {$text_allocator_2
-	std.debug.print(\"Hello, world!\\n\", .{});
+	std.debug.print(\"Hello, world!\\\\n\", .{});
 }"
 }
 
@@ -166,7 +166,7 @@ while true; do
 	defer aw.deinit();
 
 	const allocator = aw.allocator();
-	_ = allocator;\n\n"
+	_ = allocator;\n"
 			text_allocator_3="\n\n\texe.linkLibC(); // Needed for \`std.heap.c_allocator\`"
 			break
 			;;
