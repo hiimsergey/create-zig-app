@@ -180,9 +180,9 @@ while true; do
 when compiling in Debug mode and the C allocator (fast but doesn't track memory leaks)
 otherwise. This script includes how to use it:\n"
 			set_code
-			echo "var aw = AllocatorWrapper.init();
+			echo -e "var aw = AllocatorWrapper.init();
 defer aw.deinit();
-const allocator = aw.allocator();"
+const allocator = aw.allocator();\n"
 			set_normal
 			;;
 		*)
