@@ -11,7 +11,6 @@ text_allocator_3=""
 
 echo_main_zig() {
 	echo -e "const std = @import(\"std\");$text_allocator_1
-
 pub fn main() void {$text_allocator_2
 	std.debug.print(\"Hello, world!\\\\n\", .{});
 }"
@@ -177,7 +176,7 @@ while true; do
 			set_code
 			echo_allocator_zig
 			set_normal
-			echo "\nThis is a struct I wrote that uses the debugging allocator (slower but tracks memory leaks)
+			echo -e "\nThis is a struct I wrote that uses the debugging allocator (slower but tracks memory leaks)
 when compiling in Debug mode and the C allocator (fast but doesn't track memory leaks)
 otherwise. This script includes how to use it:\n"
 			set_code
@@ -201,6 +200,7 @@ while true; do
 	case "$yn_gitinit" in
 		[y/Y]|[y/Y][e/E][s/S])
 			git init
+			echo -e ".zig-cache/\nzig-out/" > ".gitignore"
 			b_gitcommit="true"
 			break
 			;;
