@@ -72,9 +72,11 @@ pub fn build(b: *Build) void {
 	// Executable declaration
 	const exe = b.addExecutable(.{
 		.name = \"$text_projname\",
-		.root_source_file = b.path(\"$text_mainfile\"),
-		.target = target,
-		.optimize = optimize
+		.root_module = b.createModule(.{
+			.root_source_file = b.path(\"$text_mainfile\"),
+			.target = target,
+			.optimize = optimize
+		})
 	});$text_allocator_3
 
 	// Actual installation
