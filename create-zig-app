@@ -63,7 +63,7 @@ pub const AllocatorWrapper = if (builtin.mode == .Debug) struct {
 echo_build_zig() {
 	echo -e "const Build = @import(\"std\").Build;
 
-// Latest Zig version as of writing this: $(zig version)
+// Latest Zig version as of writing this: 0.15.2
 pub fn build(b: *Build) void {
 	// Options
 	const target = b.standardTargetOptions(.{});
