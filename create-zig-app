@@ -234,4 +234,8 @@ while [ $b_gitcommit = "true" ]; do
 	esac
 done
 
-success "Done!"
+success "Done! Try it out:
+
+  cd $text_projname
+  zig build
+  zig-out/bin/$text_projname"
