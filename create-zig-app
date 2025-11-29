@@ -1,8 +1,13 @@
 #!/bin/sh
-# create-zig-app – a lean Zig project initializer
-# https://github.com/hiimsergey/create-zig-app
 
 set -eu
+
+[ $# -gt 0 ] && {
+	echo "create-zig-app - a lean Zig project initializer
+https://github.com/hiimsergey/create-zig-app
+Up to date with Zig version 0.15.2"
+	exit
+}
 
 text_mainfile=""
 text_allocator_1=""
@@ -239,3 +244,5 @@ success "Done! Try it out:
   cd $text_projname
   zig build
   zig-out/bin/$text_projname"
+
+# TODO logging framework
